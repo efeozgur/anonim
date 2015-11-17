@@ -1,4 +1,4 @@
-		<h3 style="text-align:center">Son Eklenen 5 Madde</h3>
+		<h3 style="text-align:center">Son Eklenen <kbd>5</kbd> Madde</h3>
 		<?php 
 			$sonmaddeler = mysqli_query($baglan, "select * from kanun order by id desc limit 0,5");
 			echo "<table class='table table-striped'>";

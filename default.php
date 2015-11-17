@@ -46,6 +46,9 @@
 		<div class="beyazkutu">
 			<?php include('dsnbsmd.php'); ?>			
 		</div>
+		<div class="beyazkutu">
+			<?php include('dsnbsblg.php'); ?>
+		</div>
 	</div>
 </body>
 </html>
