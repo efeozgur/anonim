@@ -8,6 +8,11 @@
 	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <body>
+<div class="row">
+	<div class="col-md-12">
+		<div class="beyazkutu"><a href="default.php">Anasayfa</a></div>
+	</div>
+</div>
 	<div class="col-md-3">
 		<div class="beyazkutu">
 			<?php include('dara.php'); ?>
