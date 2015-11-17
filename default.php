@@ -8,9 +8,22 @@
 	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <body>
+<?php 
+	session_start();
+	$_SESSION['kullanici'] = 'admin';
+ ?>
 <div class="row">
 	<div class="col-md-12">
-		<div class="beyazkutu"><a href="default.php">Anasayfa</a></div>
+		<div class="beyazkutu saga"><a href="default.php">Anasayfa</a> | Hoşgeldin 
+		<?php 
+			echo $_SESSION['kullanici']."<br>";
+			if ($_SESSION['kullanici'] == 'Misafir') {
+				echo "<a href=''>Üye Ol</a>";
+			} elseif ($_SESSION['kullanici'] =='admin') {
+				echo "<a href=''>Kanun Ekle</a> | <a href=''>Daire Ekle</a> | <a href=''> İçtihat Ekle </a>";
+			} 
+		?>
+		</div>
 	</div>
 </div>
 	<div class="col-md-3">
