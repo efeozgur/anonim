@@ -1,5 +1,5 @@
 		<h3 style="text-align:center">Son Eklenen <kbd>5</kbd> Bilgi</h3>
-		<table class="table table-striped">
+		<table class="table table-hover">
 		<?php 
 			$bilgigetir = mysqli_query($baglan, "select * from bilgitbl order by id desc limit 0,5");
 			while ($bilgi = mysqli_fetch_array($bilgigetir)) {

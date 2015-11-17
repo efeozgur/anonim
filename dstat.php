@@ -1,4 +1,4 @@
-			<table class="table table-striped">
+			<table class="table table-hover">
 				<?php 
 				include('baglan.php');
 						$kanunlardan = mysqli_query($baglan, "select * from kanunlar");

@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 body {
-	    background-color: #272822;
+	    
 	    font-family: Raleway;
 }
 
@@ -40,7 +40,7 @@ body{
 	font-size:12px;
 }
 
-input[type="text"] {
+.beyazkutu input[type="text"] {
     width: 100%;
     height:35px;
 	padding-left: 10px;
@@ -48,6 +48,12 @@ input[type="text"] {
 	color:#fff;
 	border-radius:5px;
 
+}
+
+input[type="text"]{
+	width:100%;
+	padding-left: 10px;
+	height: 35px;
 }
 
 input[type="submit"] {

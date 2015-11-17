@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/ozel.css" />
 </head>
-<body>
+<body style="background-color: #272822;" >
 <?php 
 	session_start();
 	$_SESSION['kullanici'] = 'admin';
@@ -20,7 +20,7 @@
 			if ($_SESSION['kullanici'] == 'Misafir') {
 				echo "<a href=''>Üye Ol</a>";
 			} elseif ($_SESSION['kullanici'] =='admin') {
-				echo "<a href=''>Kanun Ekle</a> | <a href=''>Daire Ekle</a> | <a href=''> İçtihat Ekle </a>";
+				echo "<a href='kanunekle.php'>Kanun Ekle</a> | <a href='dairekle.php'>Daire Ekle</a> | <a href='iekle.php'> İçtihat Ekle </a>";
 			} 
 		?>
 		</div>
