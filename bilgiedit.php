@@ -10,7 +10,7 @@
 </head>
 <body>
 	<?php 
-		include('menu.php');
+		include('menu.php');  
 		$no = $_GET['id'];
 		$getir = mysqli_query($baglan, "select * from bilgitbl where id='$no'");
 		while ($bilgigetir = mysqli_fetch_array($getir)) {

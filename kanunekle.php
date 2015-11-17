@@ -19,6 +19,10 @@
 			<td><input type="text" name="kanunno" /></td>
 		</tr>		
 		<tr>
+			<td>Kanun Madde Sayısı</td>
+			<td><input type="text" name="kanunmaddesayisi" /></td>
+		</tr>
+		<tr>
 			<td>Anasayfa</td>
 			<td><input type="submit" value="Ekle" /></td>
 		</tr>	
@@ -28,8 +32,9 @@
 	if ($_POST) {
 		$kanunadi = $_POST['kanunadi'];
 		$kanunno = $_POST['kanunno'];
+		$kanunmaddesayisi = $_POST['kanunmaddesayisi'];
 		if (!empty($kanunadi) and (!empty($kanunno))) {
-			$kaydet=mysqli_query($baglan,"insert into kanunlar (kanunadi, kanunno) values ('$kanunadi','$kanunno')");
+			$kaydet=mysqli_query($baglan,"insert into kanunlar (kanunadi, kanunno, maddesayisi) values ('$kanunadi','$kanunno','$kanunmaddesayisi')");
 			if ($kaydet) {
 				echo "Kanun Eklendi!";
 			}
