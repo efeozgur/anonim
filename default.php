@@ -43,6 +43,9 @@
 		<div class="beyazkutu">
 			<?php include('dgenelstat.php'); ?>
 		</div>
+		<div class="beyazkutu">
+			<?php include('dsnbsmd.php'); ?>			
+		</div>
 	</div>
 </body>
 </html>
