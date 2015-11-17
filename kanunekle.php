@@ -36,7 +36,7 @@
 		if (!empty($kanunadi) and (!empty($kanunno))) {
 			$kaydet=mysqli_query($baglan,"insert into kanunlar (kanunadi, kanunno, maddesayisi) values ('$kanunadi','$kanunno','$kanunmaddesayisi')");
 			if ($kaydet) {
-				echo "Kanun Eklendi!";
+				echo "Kanun Eklendi!"; 
 			}
 		} else {echo "Tüm alanları doldurun!..";}
 		
