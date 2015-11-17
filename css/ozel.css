@@ -1,0 +1,67 @@
+.kutu {
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 10px;
+	border-color: #e4e4e4;
+	background-color: #fff;
+	margin:10px;
+	padding:5px;
+	text-align: center;
+}
+
+.kutu a{
+	text-decoration: none;
+	color:#F3F8F8;
+	background-color: #000;
+	padding:3px;
+}
+
+body{
+	list-style: none;
+}
+
+.kutum {
+	border-style: dotted;
+	border-width: 1px;
+	border-color: gray;
+	
+	margin:3px;
+	padding:3px;
+}
+
+
+.kucukyazi {
+	font-size:12px;
+}
+
+input[type="text"] {
+    width: 100%;
+	padding-left: 10px;
+}
+
+input[type="submit"] {
+	width: 100%;
+}
+
+h5 a {
+	color:white;
+}
+h5 a:hover{
+	color:#e5e5e5;
+}
+
+.tekkanunkutu {
+
+	border-width: 2px;
+	border-color: gray;
+	background-color: #FDF9EE;
+	color:#000;
+	padding:10px;
+	font-size: 18px;
+	border-radius: 5px;
+	margin:15px;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
+    border:1px solid gray;
+}

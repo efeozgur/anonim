@@ -1,0 +1,1 @@
+<p> <a href="index.php">Anasayfa</a> - <a href="ekle.php">Kanun Şerhi Ekle</a> - <a href="iekle.php">İçtihat Ekle</a> - <a href="dairekle.php">Daire Ekle</a> - <a href="kanunekle.php">Kanun Ekle</a> - <a href="icgoster.php">İçtihat Listesi</a> </p>
