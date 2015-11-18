@@ -19,10 +19,16 @@
 				extract($kanunyaz);
 				echo "<p><b><a href=''>Madde $maddeno </a></b> $madde</p>";	
 				$ictihatigetir = mysqli_query($baglan, "select * from serh where ilgili = '$ilgiliserh'");
+				$bilgigetir = mysqli_query($baglan, "select * from bilgitbl where bilgibaslik = '$ilgiliserh'");
+				$kacbilgi = mysqli_num_rows($bilgigetir);
 				$kacictihat = mysqli_num_rows($ictihatigetir);
 				if ($kacictihat > '0') {
-					echo "<p class='ictihat'><a href='goster.php?id=$ilgiliserh'>$kacictihat İçtihat</a></p><hr>";
-				}							
+					echo "<p class='ictihat'><a href='goster.php?id=$ilgiliserh'>$kacictihat İçtihat</a></p>";
+				}	
+				if ($kacbilgi > '0') {
+					echo "<p class='bilgi'><a href='bilgigoster.php?ilgili=$ilgiliserh'>$kacbilgi Bilgi</a></p>";
+					echo "<hr>";			
+				}			
 			}
 						
 							

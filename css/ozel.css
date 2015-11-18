@@ -129,13 +129,38 @@ h5 a:hover{
 }
 
 .ictihat a:hover{
-	color:#000;
-	background-color: yellow;
+	color:#fff;
+	background-color:#376DA0;
 	text-decoration: none;
 	transition:0.4s;
 	border-bottom-right-radius: 10px;
 	padding-left: 3px;
 }
+
+.bilgi {
+	border-style: solid;
+	border-bottom-right-radius: 10px;
+	border-width: 1px;
+	background-color: #272822;
+	color:#fff;
+	width:60px;
+	font-size: 10px;
+}
+
+.bilgi a{
+	color:#fff;
+	display: block;
+}
+
+.bilgi a:hover{
+	color:#fff;
+	background-color:red;
+	text-decoration: none;
+	transition:0.4s;
+	border-bottom-right-radius: 10px;
+	padding-left: 3px;
+}
+
 
 #yukari{position:fixed; border-radius:10px; bottom:0; right:30px; margin-bottom:10px; background:#272822;; color:#fff; padding:10px;}
 #yukari a{
