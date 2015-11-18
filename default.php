@@ -49,7 +49,7 @@
 							$kanunara = mysqli_query($baglan, "select * from kanunlar where kanunadi like '%$gelenveri%'");
 							while ($dkanun = mysqli_fetch_array($kanunara)) {
 								extract($dkanun);
-								echo "<tr><td><a href=''>$kanunadi</a></td></tr>";
+								echo "<tr><td><a href='dkanungoster.php?kanun=$kanunadi'>$kanunadi</a></td></tr>";
 							}
 							echo "</table>";
 							break;
