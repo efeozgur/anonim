@@ -38,7 +38,18 @@
 							while ($dgetir = mysqli_fetch_array($daireara)) {
 								extract($dgetir);
 								$temizozet = strip_tags($ozet);
-								echo "<tr><td><a title='$temizozet' href='serhgoster.php?id=$id'>$daire - $esasno - $kararno</a></td></tr>";
+								echo "<tr><td><a title='$temizozet' href='dserhgoster.php?id=$id'>$daire - $esasno - $kararno</a></td></tr>";
+							}
+							echo "</table>";
+							break;
+						case 'kanunara':
+							echo "<table class='table table-striped'>";
+							echo "<h3>Arama Sonuçları</h3>";
+							$gelenveri = $_POST['veri'];
+							$kanunara = mysqli_query($baglan, "select * from kanunlar where kanunadi like '%$gelenveri%'");
+							while ($dkanun = mysqli_fetch_array($kanunara)) {
+								extract($dkanun);
+								echo "<tr><td><a href=''>$kanunadi</a></td></tr>";
 							}
 							echo "</table>";
 							break;
