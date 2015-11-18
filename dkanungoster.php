@@ -11,6 +11,7 @@
 
 <?php include('kaydir.php'); ?>
 <body style="background-color: #272822;" >
+<?php include('dmenu.php'); ?>
 	<div style="margin:20px; border-radius:5px;" class="beyazkutu">
 		<h3 style="text-align:center"><?php echo $kanun; ?></h3>
 		<?php 
@@ -23,7 +24,7 @@
 				$kacbilgi = mysqli_num_rows($bilgigetir);
 				$kacictihat = mysqli_num_rows($ictihatigetir);
 				if ($kacictihat > '0') {
-					echo "<p class='ictihat'><a href='goster.php?id=$ilgiliserh'>$kacictihat İçtihat</a></p>";
+					echo "<p class='ictihat'><a href='dgoster.php?ilgili=$ilgiliserh'>$kacictihat İçtihat</a></p>";
 				}	
 				if ($kacbilgi > '0') {
 					echo "<p class='bilgi'><a href='bilgigoster.php?ilgili=$ilgiliserh'>$kacbilgi Bilgi</a></p>";

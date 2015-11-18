@@ -15,7 +15,7 @@
 					$saybakim = mysqli_num_rows($kanundan);
 
 					echo "<tr>
-							<td><a href='kanungoster.php?kanun=$kanunadi&no=$kanunno'>$kanunadi</a></td>
+							<td><a href='dkanungoster.php?kanun=$kanunadi&no=$kanunno'>$kanunadi</a></td>
 							<td>$maddesayisi</td>
 							<td>$saybakim </td>
 							<td>%". @$oran = round($saybakim/$maddesayisi*100,2)."</td>
