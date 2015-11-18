@@ -112,3 +112,31 @@ h5 a:hover{
 .beyazkutu.saga {
 	text-align: right;
 }
+
+.ictihat {
+	border-style: solid;
+	border-bottom-right-radius: 10px;
+	border-width: 1px;
+	background-color: #272822;
+	color:#fff;
+	width:60px;
+	font-size: 10px;
+}
+
+.ictihat a{
+	color:#fff;
+}
+
+.ictihat a:hover{
+	color:#fff;
+	text-decoration: underline;
+}
+
+#yukari{position:fixed; border-radius:10px; bottom:0; right:30px; margin-bottom:10px; background:#272822;; color:#fff; padding:10px;}
+#yukari a{
+	color:#fff;
+	font-family: verdana;
+}
+#yukari a:hover{
+	text-decoration: none;
+}
