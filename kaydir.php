@@ -1,6 +1,23 @@
-<?php 
-function goToByScroll(id) {
-  var op = jQuery.browser.opera ? jQuery("html") : jQuery("html, body");
-  op.animate({ scrollTop: jQuery("#"+id).offset().top }, 'slow');
-}
- ?>
+<script>	
+	$(document).ready(function() {
+	    $("#yukari").hide();
+	    $(function(){
+	        $(window).scroll(function(){
+	            if ($(this).scrollTop() > 100) {
+	                $('#yukari').fadeIn();
+	            } else {
+	                $('#yukari').fadeOut();
+	            }
+	        });
+	        $('#yukari a').click(function () {
+	            $('body,html').animate({
+	                scrollTop: 0
+	            }, 800);
+	            return false;
+	        });
+	    });
+	});	
+</script>
+<div id="yukari" style="display: block;">
+    <a href="#ust">Sayfa Başına Git</a>
+</div>

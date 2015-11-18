@@ -125,11 +125,16 @@ h5 a:hover{
 
 .ictihat a{
 	color:#fff;
+	display: block;
 }
 
 .ictihat a:hover{
-	color:#fff;
-	text-decoration: underline;
+	color:#000;
+	background-color: yellow;
+	text-decoration: none;
+	transition:0.4s;
+	border-bottom-right-radius: 10px;
+	padding-left: 3px;
 }
 
 #yukari{position:fixed; border-radius:10px; bottom:0; right:30px; margin-bottom:10px; background:#272822;; color:#fff; padding:10px;}
