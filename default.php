@@ -53,7 +53,18 @@
 							}
 							echo "</table>";
 							break;
-						
+						case 'kmdmtnara':
+							echo "<table class='table table-striped'>";
+							echo "<h3>Arama Sonuçları</h3>";
+							$gelenveri = $_POST['veri'];
+							$kmdmtnara = mysqli_query($baglan, "select * from kanun where madde like '%$gelenveri%'");
+							while ($dkmdmtnara = mysqli_fetch_array($kmdmtnara)) {
+								extract($dkmdmtnara);
+								$temizmadde = strip_tags($madde);
+								echo "<tr><td><a title='$temizmadde' href='dtekkanungoster.php?ilgili=$ilgiliserh'>$kanunadi - $kanunno</a></td></tr>";
+							}
+							echo "</table>";
+							break;
 						default:
 							# code...
 							break;
