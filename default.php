@@ -1,4 +1,5 @@
-<?php include('baglan.php'); ?>
+<?php include('baglan.php');
+include('fonk.php'); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -53,6 +54,18 @@
 							}
 							echo "</table>";
 							break;
+						case 'kmdara':
+							echo "<table class='table table-striped'>";
+							echo "<h3>Arama Sonuçları</h3>";
+							$gelenveri = $_POST['veri'];
+							$kanunara = mysqli_query($baglan, "select * from kanun where maddeno like '$gelenveri'");
+							while ($dkanun = mysqli_fetch_array($kanunara)) {
+								extract($dkanun);
+								$temizmadde = strip_tags($madde);
+								echo "<tr><td><a title='$temizmadde' href='dkanungoster.php?kanun=$kanunadi'>$kanunadi - $maddeno. madde</a></td></tr>";
+							}
+							echo "</table>";
+							break;
 						case 'kmdmtnara':
 							echo "<table class='table table-striped'>";
 							echo "<h3>Arama Sonuçları</h3>";
@@ -61,9 +74,28 @@
 							while ($dkmdmtnara = mysqli_fetch_array($kmdmtnara)) {
 								extract($dkmdmtnara);
 								$temizmadde = strip_tags($madde);
-								echo "<tr><td><a title='$temizmadde' href='dtekkanungoster.php?ilgili=$ilgiliserh'>$kanunadi - $kanunno</a></td></tr>";
+								echo "<tr><td><a title='$temizmadde' href='dtekkanungoster.php?ilgili=$ilgiliserh'>$kanunno - $ilgiliserh</a></td></tr>";
 							}
 							echo "</table>";
+							break;
+						case 'ictihatara':
+							echo "<ul>";
+							$gelenveri = $_POST['veri'];
+							//$gelenveri =  cevir($gelenveri);
+							$kelimearabakim = mysqli_query($baglan, "select * from serh where lower(serh) like '%$gelenveri%' or lower(ozet) like '%$gelenveri%'");
+							$say = mysqli_num_rows($kelimearabakim);
+							if ($say =='0') {
+								echo "<p style='text-align:center;'>Kayıt bulunamadı.</p><br>";
+							} else {echo "<p style='text-align:center;'>$say serh bulundu.</p><br>";}
+							
+							while ($kelimeara = mysqli_fetch_array($kelimearabakim)) {
+								extract($kelimeara);
+								$temizozet = substr(strip_tags($ozet),0,300);
+								$temizozet = cevir($temizozet);
+								echo "<li> <a title='$temizozet ...devamı için tıklayın' href='dserhgoster.php?id=$id&aranan=$gelenveri'> $daire - $esasno - $kararno </a></li>";
+
+							}
+							echo "</ul>";
 							break;
 						default:
 							# code...
