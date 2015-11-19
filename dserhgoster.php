@@ -24,7 +24,7 @@
 		echo "<h4 style='color:white; text-align:center'>$kararno Karar</h4>";
 		echo "<div style='font-size:20px; border-style:solid; border-color:gray; border-radius:3px; border-width:1px; padding:5px; margin:25px; background-color:#FDF9EE; color:#000'>
 			
-			<b><i>İlgili Madde </b> : <a target='_blank' href='tekanungoster.php?ilgili=$ilgili'> $ilgili</a></i><br><br>";
+			<b><i>İlgili Madde </b> : <a target='_blank' href='dtekkanungoster.php?ilgili=$ilgili'> $ilgili</a></i><br><br>";
 			echo "<b>Özet : " . renklendir($ozet, $aranan, '#FDDA36') . "</p><br><br></b>";
 			echo "<b>İçtihat Metni :</b>". renklendir($serh, $aranan , '#FDDA36');
 			

@@ -56,6 +56,12 @@ input[type="text"]{
 	height: 35px;
 }
 
+input[type="password"]{
+	width:100%;
+	padding-left: 10px;
+	height: 35px;
+}
+
 input[type="submit"] {
 	width: 100%;
 	color:#000;
@@ -169,4 +175,29 @@ h5 a:hover{
 }
 #yukari a:hover{
 	text-decoration: none;
+}
+
+
+.ictihatekle {
+	border-style: solid;
+	border-bottom-right-radius: 10px;
+	border-width: 1px;
+	background-color: #D02023;
+	color:#fff;
+	width:100px;
+	font-size: 14px;
+}
+
+.ictihatekle a{
+	color:#fff;
+	display: block;
+}
+
+.ictihatekle a:hover{
+	color:#fff;
+	background-color:#376DA0;
+	text-decoration: none;
+	transition:0.4s;
+	border-bottom-right-radius: 10px;
+	padding-left: 3px;
 }

@@ -30,7 +30,7 @@
 						echo "<p><b>Esas No :</b> $esasno</p>";
 						echo "<p><b>Karar No : </b>$kararno</p>";
 						echo "<p><b>İçtihat Özeti : </b>$ozet</p>";
-						echo "<p class='ictihat'><a href=''>Devamını gör...</a></p><hr>";
+						echo "<p class='ictihat'><a href='dserhgoster.php?id=$id'>Devamını gör...</a></p><hr>";
 					}		
 				}
 			 ?>

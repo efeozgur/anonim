@@ -6,6 +6,14 @@
 	<title>Daire Ekle</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 </head>
+<?php 
+	session_start();
+	if (@$_SESSION['kullanici'] == '') {
+		header('Refresh: 1; url=giris.php');
+		echo "Önce giriş yapınız...!!!";
+		exit();
+	}
+ ?>
 <body>
 <?php include('menu.php'); ?>
 	<table class="table table-striped">

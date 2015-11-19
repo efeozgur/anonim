@@ -28,8 +28,17 @@
 				}	
 				if ($kacbilgi > '0') {
 					echo "<p class='bilgi'><a href='bilgigoster.php?ilgili=$ilgiliserh'>$kacbilgi Bilgi</a></p>";
-					echo "<hr>";			
-				}			
+							
+				}	
+
+				$kullanici = mysqli_query($baglan, "select * from uye where id='1'");
+				$kgetir = mysqli_fetch_array($kullanici);
+				extract($kgetir);
+				//session_start();
+				if ($_SESSION['kullanici'] == $kadi) {
+							echo "<p class='ictihatekle'><a href=''>İçtihat Ekle</a></p>";
+						}	
+				echo "<hr>";		
 			}
 						
 							
