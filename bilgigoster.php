@@ -9,7 +9,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<?php include('menu.php'); ?>
+<?php include('dmenu.php'); ?>
 	<div class="tekkanunkutu">
 	<?php 
 

@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>İçtihat Ekle</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/ozel.css" />
 	<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
 		exit();
 	}
  ?>
-<?php include('menu.php'); ?>
+<?php include('dmenu.php'); ?>
 	<table class="table table-striped">
 	<form action="" method="POST">
 		<tr>

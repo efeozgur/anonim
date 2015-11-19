@@ -10,7 +10,7 @@
 </head>
 <body>
 	<?php 
-	include('menu.php');
+	include('dmenu.php');
 		$gelenserh = $_GET['ilgili'];
 		$sorgulagetir = mysqli_query($baglan, "select * from kanun where ilgiliserh = '$gelenserh'");
 		$sorgu = mysqli_fetch_array($sorgulagetir);

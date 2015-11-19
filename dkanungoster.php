@@ -35,8 +35,8 @@
 				$kgetir = mysqli_fetch_array($kullanici);
 				extract($kgetir);
 				//session_start();
-				if ($_SESSION['kullanici'] == $kadi) {
-							echo "<p class='ictihatekle'><a href=''>İçtihat Ekle</a></p>";
+				if (@$_SESSION['kullanici'] == $kadi) {
+							echo "<p class='ictihatekle'><a href='icekle.php?ilgili=$ilgiliserh'>İçtihat Ekle</a></p>";
 						}	
 				echo "<hr>";		
 			}
