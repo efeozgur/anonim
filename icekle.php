@@ -9,6 +9,15 @@
 </head>
 <body>
 <?php 
+	session_start();
+	if (@$_SESSION['kullanici'] == '') {
+		header('Refresh: 1; url=giris.php');
+		echo "Önce giriş yapınız...!!!";
+		exit();
+	}
+ ?>
+
+<?php 
 	$ilgiliserh = $_GET['ilgili'];
  ?>
 <?php include('menu.php'); ?>

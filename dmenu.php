@@ -2,7 +2,7 @@
 	<div class="col-md-12">
 		<div class="beyazkutu saga"><a href="default.php">Anasayfa</a>
 			<?php 
-				session_start();
+				@session_start();
 
 				//$kullanici = $_SESSION['kullanici'];
 				if (@$_SESSION['kullanici'] == 'admin') {

@@ -8,6 +8,14 @@
 	<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 </head>
 <body>
+<?php 
+	session_start();
+	if (@$_SESSION['kullanici'] == '') {
+		header('Refresh: 1; url=giris.php');
+		echo "Önce giriş yapınız...!!!";
+		exit();
+	}
+ ?>
 <?php include('menu.php'); ?>
 	<table class="table table-striped">
 	<form action="" method="POST">

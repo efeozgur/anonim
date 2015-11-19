@@ -1,13 +1,23 @@
-<?php include('baglan.php'); ?>
+<?php include('baglan.php'); 
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Daire Ekle</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <body>
-<?php include('menu.php'); ?>
+<?php 
+	if (@$_SESSION['kullanici'] == '') {
+		header('Refresh: 1; url=giris.php');
+		echo "Önce giriş yapınız...!!!";
+		exit();
+	}
+ ?>
+<?php include('dmenu.php'); ?>
 	<table class="table table-striped">
 	<form action="" method="POST">
 		<tr>

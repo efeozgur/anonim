@@ -5,6 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Daire Ekle</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <?php 
 	session_start();
@@ -15,7 +16,7 @@
 	}
  ?>
 <body>
-<?php include('menu.php'); ?>
+<?php include('dmenu.php'); ?>
 	<table class="table table-striped">
 	<form action="" method="POST">
 		<tr>
