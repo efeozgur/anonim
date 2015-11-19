@@ -18,7 +18,7 @@
 			$kanun = mysqli_query($baglan, "select * from kanun where kanunadi = '$kanun' order by maddeno asc");			
 			while ($kanunyaz = mysqli_fetch_array($kanun)) {
 				extract($kanunyaz);
-				echo "<p><b><a href=''>Madde $maddeno </a></b> $madde</p>";	
+				echo "<p><b><a href='dtekkanungoster.php?ilgili=$ilgiliserh'>Madde $maddeno </a></b> $madde</p>";	
 				$ictihatigetir = mysqli_query($baglan, "select * from serh where ilgili = '$ilgiliserh'");
 				$bilgigetir = mysqli_query($baglan, "select * from bilgitbl where bilgibaslik = '$ilgiliserh'");
 				$kacbilgi = mysqli_num_rows($bilgigetir);

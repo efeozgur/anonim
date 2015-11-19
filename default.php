@@ -81,7 +81,7 @@ include('fonk.php'); ?>
 						case 'ictihatara':
 							echo "<ul>";
 							$gelenveri = $_POST['veri'];
-							//$gelenveri =  cevir($gelenveri);
+							//$gelenveri =  cevir($gelenveri);	
 							$kelimearabakim = mysqli_query($baglan, "select * from serh where lower(serh) like '%$gelenveri%' or lower(ozet) like '%$gelenveri%'");
 							$say = mysqli_num_rows($kelimearabakim);
 							if ($say =='0') {

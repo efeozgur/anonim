@@ -6,9 +6,11 @@
 	<title>Ayrıntılı Kanun Şerhleri - Şerh Göster</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/ozel.css" />
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body style="background-color: #272822;" >
 <?php include('dmenu.php'); ?>
+<?php include('kaydir.php'); ?>
 	<?php 
 	include('fonk.php');
 		$serhno = $_GET['id'];

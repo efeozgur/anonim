@@ -22,7 +22,7 @@
 			while ($ilgili = mysqli_fetch_array($ilgiliserhigetir)) {
 				extract($ilgili);
 				echo "<div style='border-style:solid; border-color:gray; border-width:1px; font-size:12px; padding:15px; margin:5px; background-color:#fff; border-radius:5px;'>
-					<p><b><a href='serhgoster.php?id=$id'>$daire | $esasno - $kararno</a></b></p>
+					<p><b><a href='dserhgoster.php?id=$id'>$daire | $esasno - $kararno</a></b></p>
 					<p>$ozet</p>
 				</div>";
 			}
