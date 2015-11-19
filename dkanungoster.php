@@ -15,6 +15,15 @@
 	<div style="margin:20px; border-radius:5px;" class="beyazkutu">
 		<h3 style="text-align:center"><?php echo $kanun; ?></h3>
 		<?php 
+			$kullanici = mysqli_query($baglan, "select * from uye where id='1'");
+			$kgetir = mysqli_fetch_array($kullanici);
+			extract($kgetir);
+
+			if (@$_SESSION['kullanici'] == $kadi) {
+					$gelenkanun = $_GET['kanun'];
+					$gelenno = $_GET['no'];
+					echo "<h4 style='text-align:center;'><a href='kekle.php?kanun=$gelenkanun&no=$gelenno'>Madde Ekle</a></h4>";
+			}		
 			$kanun = mysqli_query($baglan, "select * from kanun where kanunadi = '$kanun' order by maddeno asc");			
 			while ($kanunyaz = mysqli_fetch_array($kanun)) {
 				extract($kanunyaz);

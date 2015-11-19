@@ -6,13 +6,14 @@
 	<title>Kanun Şerhi Ekle</title>
 	<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <body>
 <?php 
 	$kanununadi = $_GET['kanun'];
 	$kanununno = $_GET['no'];
  ?>
-<?php include('menu.php'); ?>
+<?php include('dmenu.php'); ?>
 <form action="" method="POST">
 	<table class="table table-striped">
 		<tr>
@@ -42,7 +43,8 @@
 		<tr>
 			<td>Anasayfa</td>
 			<td><input type="submit" value="Ekle" /></td>
-		</tr>			
+
+		</tr>		
 	</table>
 </form>
 
