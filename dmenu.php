@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-12">
-		<div class="beyazkutu saga"><a href="default.php">Anasayfa</a>
+		<div class="beyazkutu saga"><a href="index.php">Anasayfa</a>
 			<?php 
 				@session_start();
 

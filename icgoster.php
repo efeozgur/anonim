@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/ozel.css" />
 </head>
 <body>
-<?php include('menu.php'); ?>
+<?php include('dmenu.php'); ?>
 <div style="border-style:solid; border-color:gray; border-width:1px; margin:15px; padding:5px;">
 	<table class="table table-striped">
 		<tr>
@@ -25,11 +25,13 @@
 			echo "<p style='text-align:center;'>Toplam <b>$say</b> adet içtihat bulunmaktadır.</p>";
 			while ($serhlistesi = mysqli_fetch_array($serhler)) {
 				extract($serhlistesi);
+				$ozetozet = substr($ozet, 0,200);
+				$ozetozet = strip_tags($ozetozet);
 				echo "<tr>
-				<td><a href='serhgoster.php?id=$id'>$daire</a></td>
+				<td><a href='dserhgoster.php?id=$id'>$daire</a></td>
 				<td>$esasno</td>
 				<td>$kararno</td>
-				<td>$ozet</td>
+				<td>$ozetozet...[<a href='dserhgoster.php?id=$id'>Devamı</a>]</td>
 				<td><a target='_blank' href='ilgilimadde.php?id=$ilgili'>$ilgili</a></td>
 				</tr>";
 			}
