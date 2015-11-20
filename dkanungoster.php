@@ -30,13 +30,18 @@
 				echo "<p><b><a href='dtekkanungoster.php?ilgili=$ilgiliserh'>Madde $maddeno </a></b> $madde</p>";	
 				$ictihatigetir = mysqli_query($baglan, "select * from serh where ilgili = '$ilgiliserh'");
 				$bilgigetir = mysqli_query($baglan, "select * from bilgitbl where bilgibaslik = '$ilgiliserh'");
+				$bilgibilgi = mysqli_fetch_array($bilgigetir);
+				@extract($bilgibilgi);
 				$kacbilgi = mysqli_num_rows($bilgigetir);
 				$kacictihat = mysqli_num_rows($ictihatigetir);
 				if ($kacictihat > '0') {
 					echo "<p class='ictihat'><a href='dgoster.php?ilgili=$ilgiliserh'>$kacictihat İçtihat</a></p>";
 				}	
 				if ($kacbilgi > '0') {
-					echo "<p class='bilgi'><a href='bilgigoster.php?ilgili=$ilgiliserh'>$kacbilgi Bilgi</a></p>";
+					@$temizozet = strip_tags($bilgi);
+					@$ozetozet = substr($temizozet, 0,300);
+					@$ozetozet = $ozetozet . "...[Devamı için tıklayın]";
+					echo "<p class='bilgi'><a title='$ozetozet' href='bilgigoster.php?ilgili=$ilgiliserh'>$kacbilgi Bilgi</a></p>";
 							
 				}	
 
@@ -46,6 +51,7 @@
 				//session_start();
 				if (@$_SESSION['kullanici'] == $kadi) {
 							echo "<p class='ictihatekle'><a href='icekle.php?ilgili=$ilgiliserh'>İçtihat Ekle</a></p>";
+							echo "<p class='ictihatekle'><a href='bilgiekle.php?ilgili=$ilgiliserh'>Bilgi Ekle</a></p>";
 						}	
 				echo "<hr>";		
 			}

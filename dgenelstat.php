@@ -7,6 +7,8 @@
 			$maddest = mysqli_num_rows($maddest1);
 			$serhst1 = mysqli_query($baglan, "select * from serh");
 			$serhst = mysqli_num_rows($serhst1);
+			$bilgist1 = mysqli_query($baglan, "select * from bilgitbl");
+			$bilgist = mysqli_num_rows($bilgist1);
 
 			$serhliste1 = mysqli_query($baglan, "select * from serh");
 			while ($serhlistesi = mysqli_fetch_array($serhliste1)) {
@@ -24,5 +26,9 @@
 			<tr>
 				<td>İçtihat Sayısı</td>
 				<td><?php echo "<a href='icgoster.php'> $serhst </a>"; ?></td>
-			</tr>			
+			</tr>	
+			<tr>
+				<td>Bilgi sayısı</td>
+				<td><?php echo $bilgist;?></td>
+			</tr>
 		</table>

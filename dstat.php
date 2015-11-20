@@ -18,8 +18,12 @@
 							<td><a href='dkanungoster.php?kanun=$kanunadi&no=$kanunno'>$kanunadi</a></td>
 							<td>$maddesayisi</td>
 							<td>$saybakim </td>
-							<td>%". @$oran = round($saybakim/$maddesayisi*100,2)."</td>
-					</tr>";
+							<td>";
+							@$oran = round($saybakim/$maddesayisi*100,2);
+							if($oran=='100'){
+								echo "<span style='border-radius:5px;background-color:green; color:#fff; font-weight:bolder; padding:4px'>%$oran</span>";
+							} else {echo "<span style='border-radius:5px; background-color:red; color:#fff; font-weight:bolder; padding:4px'>%$oran</span>";}
+							"</td></tr>";
 				}
 			 ?>
 			</table>	
