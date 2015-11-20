@@ -8,7 +8,7 @@
 	<?php 
 		session_start();
 		session_destroy();
-		header('Refresh: 1; url=default.php');
+		header('Refresh: 1; url=index.php');
 		echo "Çıkış işlemi tamamlandı. Yönlendiriliyorsunuz...";
 	 ?>
 </body>
