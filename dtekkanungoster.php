@@ -26,7 +26,11 @@
 					<p>$ozet</p>
 				</div>";
 			}
+			if (@$_SESSION['kullanici'] == 'admin') { 
+			echo "<div style='border-radius:5px; border-style:dotted; border-width:1px; padding-left:4px;'><a href='icekle.php?ilgili=$ilgiliserh'>İçtihat Ekle</a> | <a href='bilgiekle.php?ilgili=$ilgiliserh'>Bilgi Ekle</a> </div>";
+		};
 		echo "</div>";
+
 	 ?>
 </body>
 </html>

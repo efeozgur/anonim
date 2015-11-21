@@ -9,9 +9,13 @@
 	<script src="ckeditor/ckeditor.js" type="text/javascript"></script>
 </head>
 <body>
+
+
 <?php 
 	$bilgi = $_GET['ilgili'];
-	include('menu.php');
+	session_start();
+	include('giriskontrol.php');
+	include('dmenu.php');
  ?>
 	<table class="table table-striped">
 		<tr>
