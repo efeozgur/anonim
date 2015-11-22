@@ -6,11 +6,14 @@
 	<title>Şerh Listele</title>
 	<link rel="stylesheet" href="css/ozel.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
 <body>
 
 <?php 
+
 	include('dmenu.php');
+	include('kaydir.php');
 	$sayfa =@$_GET['sahife'];
 	$kayitsayisi = mysqli_num_rows(mysqli_query($baglan, "select * from serh"));
 	if (empty($sayfa) || !is_numeric($sayfa)) {
@@ -32,7 +35,7 @@
 	</tr>";
 	while ($kayit = mysqli_fetch_array($kayitgetir)) {
 		extract($kayit);
-		$temizvekisa = strip_tags(substr($ozet,0,300));
+		$temizvekisa = strip_tags(substr($ozet,0,400));
 		echo "<tr>
 			<td><a href='dserhgoster.php?id=$id'>$daire</a></td>
 			<td>$esasno</td>
