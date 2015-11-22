@@ -17,9 +17,9 @@ include('fonk.php'); ?>
 			<div class="karakutu">				
 					<p><input type="radio" name="ara" value="daireara">Daire Ara</p>
 					<p><input type="radio" name="ara" value="kanunara">Kanun Ara</p>
-					<p><input type="radio" name="ara" value="kmdara">Kanun Maddesi Ara</p>
+					<p><input type="radio" name="ara" value="kmdara" checked="checked">Kanun Maddesi Ara</p>
 					<p><input type="radio" name="ara" value="kmdmtnara">Kanun Madde Metni Ara</p>
-					<p><input type="radio" name="ara" value="ictihatara" checked="checked">İçtihat Ara</p>
+					<p><input type="radio" name="ara" value="ictihatara" >İçtihat Ara</p>
 					<p><input type="radio" name="ara" value="eictihatara">İçtihat Ara (Esasa Göre)</p>
 					<p><input type="radio" name="ara" value="kictihatara">İçtihat Ara (Karara Göre)</p>
 					<p><input type="submit" value="Ara" /></p>
