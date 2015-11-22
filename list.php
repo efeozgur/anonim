@@ -31,6 +31,7 @@
 		<td><b>Esas No</b></td>
 		<td><b>Karar No</b></td>
 		<td><b>Şerh</b></td>
+		<td><b>İlgili Madde</b></td>
 
 	</tr>";
 	while ($kayit = mysqli_fetch_array($kayitgetir)) {
@@ -41,6 +42,7 @@
 			<td>$esasno</td>
 			<td>$kararno</td>
 			<td>$temizvekisa...</td>
+			<td><a target='_blank' href='dtekkanungoster.php?ilgili=$ilgili'>$ilgili</a></td>
 		</tr>";
 	}
 	echo "<center>";
