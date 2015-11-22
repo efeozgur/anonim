@@ -62,7 +62,7 @@ include('fonk.php'); ?>
 							while ($dkanun = mysqli_fetch_array($kanunara)) {
 								extract($dkanun);
 								$temizmadde = strip_tags($madde);
-								echo "<tr><td><a title='$temizmadde' href='dkanungoster.php?kanun=$kanunadi'>$kanunadi - $maddeno. madde</a></td></tr>";
+								echo "<tr><td><a title='$temizmadde' href='dtekkanungoster.php?ilgili=$ilgiliserh'>$kanunadi - $maddeno. madde</a></td></tr>";
 							}
 							echo "</table>";
 							break;

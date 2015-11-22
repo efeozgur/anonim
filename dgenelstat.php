@@ -25,7 +25,7 @@
 			</tr>	
 			<tr>
 				<td>İçtihat Sayısı</td>
-				<td><?php echo "<a href='icgoster.php'> $serhst </a>"; ?></td>
+				<td><?php echo "<a href='list.php'> $serhst </a>"; ?></td>
 			</tr>	
 			<tr>
 				<td>Bilgi sayısı</td>
