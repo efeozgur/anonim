@@ -32,7 +32,7 @@
 	</tr>";
 	while ($kayit = mysqli_fetch_array($kayitgetir)) {
 		extract($kayit);
-		$temizvekisa = strip_tags(substr($serh,0,300));
+		$temizvekisa = strip_tags(substr($ozet,0,300));
 		echo "<tr>
 			<td><a href='dserhgoster.php?id=$id'>$daire</a></td>
 			<td>$esasno</td>
